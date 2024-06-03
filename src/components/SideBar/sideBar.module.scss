@@ -1,0 +1,92 @@
+$container-margin: 20px;
+$container-height: 301px;
+$nav-border-color: rgba(207, 207, 228, 1);
+$nav-width: 268px;
+$nav-border-radius: 16px;
+$nav-font-family: "nunito", sans-serif;
+$nav-link-padding: 12px;
+$nav-link-margin-left: 10px;
+$nav-link-height: 22px;
+$nav-link-width: 222px;
+$nav-link-color: black;
+$nav-link-hover-bg: rgba(95, 191, 119, 1);
+$nav-link-hover-transition: 0.2s;
+$active-bg: rgba(95, 191, 119, 1);
+$active-color: rgb(255, 255, 255);
+
+.container {
+  display: flex;
+  margin: 0;
+  margin-top: $container-margin;
+  height: $container-height;
+  margin-left: $container-margin;
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  border: 1px solid $nav-border-color;
+  width: $nav-width;
+  border-radius: $nav-border-radius;
+  text-align: start;
+  font-weight: 800;
+  font-family: $nav-font-family;
+  gap: 1px;
+
+  .nav-link {
+    padding: $nav-link-padding;
+    margin-left: $nav-link-margin-left;
+    height: $nav-link-height;
+    width: $nav-link-width;
+    text-decoration: none;
+    color: $nav-link-color;
+
+    &:first-child {
+      margin-top: $nav-link-padding;
+    }
+
+    &:last-child {
+      margin-bottom: $nav-link-padding;
+    }
+
+    &:hover {
+      background-color: $nav-link-hover-bg;
+      cursor: pointer;
+      padding: $nav-link-padding;
+      border-radius: 12px;
+      color: white;
+      transition: $nav-link-hover-transition;
+    }
+  }
+
+  .active {
+    padding: $nav-link-padding;
+    background-color: $active-bg;
+    border-radius: 12px;
+    margin-left: $nav-link-margin-left;
+    width: $nav-link-width;
+    text-decoration: none;
+    color: $active-color;
+
+    &:first-child {
+      margin-top: $nav-link-padding;
+    }
+
+    &:last-child {
+      margin-bottom: $nav-link-padding;
+    }
+  }
+}
+
+@media (max-width:600px) {
+
+  .container {
+    width: 264px;
+    margin-left: 4px;
+  }
+
+
+}
